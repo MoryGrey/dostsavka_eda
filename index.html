@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Сытый Кит — Доставка еды, Геническ</title>
+    <meta name="description" content="Сытый Кит — быстрая доставка вкусной еды в городе Геническ. Суши, роллы, пицца, вок и многое другое.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header safe-top">
+            <button class="icon-btn" aria-label="Позвонить">📞</button>
+            <div class="address-group">
+                <div class="brand">BUYGEN</div>
+                <div class="address">Доставка еды • Геническ</div>
+            </div>
+            <button class="icon-btn" aria-label="Поиск" id="open-search">🔍</button>
+        </header>
+
+        <main class="content">
+            <section class="section banner-section">
+                <div class="banner" role="img" aria-label="Ваша скидка 100₽ на первый заказ — промокод BONUS100">
+                    <div class="left">
+                        <h1 class="headline">Ваша скидка <span style="color:var(--accent);">100₽</span></h1>
+                        <p class="sub">На первый заказ — на доставку еды</p>
+                        <div class="promo-row">
+                            <div class="label-pill">Промокод</div>
+                            <button class="code-pill" id="apply-promo" type="button" aria-label="Активировать промокод">BONUS100</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="icon.png" alt="Иконка" class="food-icon">
+                    </div>
+                    <div class="sphere" id="sphere"></div>
+                    <div class="activated-text" id="activatedText">Ваш промокод активирован</div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">Категории</h2>
+                <div class="cards-grid">
+                    <a class="card card--rolls reveal" href="#" data-name="Суши и Роллы">
+                        <span class="card-title">Суши и Роллы</span>
+                        <div class="card-emoji">🍣</div>
+                    </a>
+                    <a class="card card--hot-rolls reveal" href="#" data-name="Запеченные и горячие роллы">
+                        <span class="card-title">Горячие роллы</span>
+                        <div class="card-emoji">🔥</div>
+                    </a>
+                    <a class="card card--maki reveal" href="#" data-name="Классические маки">
+                        <span class="card-title">Классик маки</span>
+                        <div class="card-emoji">🥢</div>
+                    </a>
+                    <a class="card card--sets reveal" href="#" data-name="Сеты">
+                        <span class="card-title">Сеты</span>
+                        <div class="card-emoji">🍱</div>
+                    </a>
+                    <a class="card card--salads reveal" href="#" data-name="Салаты">
+                        <span class="card-title">Салаты</span>
+                        <div class="card-emoji">🥗</div>
+                    </a>
+                    <a class="card card--wings reveal" href="#" data-name="Куриные крылья">
+                        <span class="card-title">Крылья</span>
+                        <div class="card-emoji">🍗</div>
+                    </a>
+                    <a class="card card--side-dishes reveal" href="#" data-name="Гарниры">
+                        <span class="card-title">Гарниры</span>
+                        <div class="card-emoji">🥔</div>
+                    </a>
+                    <a class="card card--meat reveal" href="#" data-name="Блюда из мяса">
+                        <span class="card-title">Мясо</span>
+                        <div class="card-emoji">🥩</div>
+                    </a>
+                    <a class="card card--pasta reveal" href="#" data-name="Паста">
+                        <span class="card-title">Паста</span>
+                        <div class="card-emoji">🍝</div>
+                    </a>
+                    <a class="card card--pizza reveal" href="#" data-name="Пицца">
+                        <span class="card-title">Пицца</span>
+                        <div class="card-emoji">🍕</div>
+                    </a>
+                    <a class="card card--burgers reveal" href="#" data-name="Бургеры">
+                        <span class="card-title">Бургеры</span>
+                        <div class="card-emoji">🍔</div>
+                    </a>
+                    <a class="card card--hot-snacks reveal" href="#" data-name="Горячие закуски">
+                        <span class="card-title">Горячие закуски</span>
+                        <div class="card-emoji">🔥</div>
+                    </a>
+                    <a class="card card--skillets reveal" href="#" data-name="Сковородки">
+                        <span class="card-title">Сковородки</span>
+                        <div class="card-emoji">🍳</div>
+                    </a>
+                    <a class="card card--shaurma reveal" href="#" data-name="Шаурма">
+                        <span class="card-title">Шаурма</span>
+                        <div class="card-emoji">🌯</div>
+                    </a>
+                    <a class="card card--wok reveal" href="#" data-name="WOK & FUNCHOZA">
+                        <span class="card-title">WOK</span>
+                        <div class="card-emoji">🍜</div>
+                    </a>
+                    <a class="card card--soups reveal" href="#" data-name="Супы">
+                        <span class="card-title">Супы</span>
+                        <div class="card-emoji">🍲</div>
+                    </a>
+                    <a class="card card--sushiritto reveal" href="#" data-name="Суширитто">
+                        <span class="card-title">Суширитто</span>
+                        <div class="card-emoji">🌯</div>
+                    </a>
+                    <a class="card card--tortilla reveal" href="#" data-name="Ролл &quot;Тортилья&quot;">
+                        <span class="card-title">Тортилья</span>
+                        <div class="card-emoji">🌮</div>
+                    </a>
+                    <a class="card card--rice reveal" href="#" data-name="Рис Тепаньяки">
+                        <span class="card-title">Рис Тепаньяки</span>
+                        <div class="card-emoji">🍚</div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav safe-bottom">
+            <a href="#" class="nav-item active" id="nav-home">🏠<span>Главная</span></a>
+            <a href="#" class="nav-item cart" id="nav-cart">🛒<span>Корзина</span><b class="badge" id="cart-badge">0</b></a>
+        </nav>
+    </div>
+
+    <div class="search-sheet" id="search-sheet" hidden>
+        <div class="sheet-backdrop" data-close></div>
+        <div class="sheet">
+            <input type="search" placeholder="Поиск блюд" class="search-input" autofocus>
+            <button class="sheet-close" data-close>Закрыть</button>
+        </div>
+    </div>
+
+    <div class="category-sheet" id="category-sheet" hidden>
+        <div class="sheet-backdrop" data-close></div>
+        <div class="sheet">
+            <div class="sheet-header">
+                <strong class="sheet-title" id="cat-title">Категория</strong>
+                <button class="sheet-close" data-close>Закрыть</button>
+            </div>
+            <div class="sheet-content">
+                <div class="empty-state" id="empty-state">Список пока пуст</div>
+                <div class="product-list" id="category-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="promo-toast" role="status" aria-live="polite">Промокод активирован</div>
+    
+    <!-- Cart sheet -->
+    <div class="category-sheet" id="cart-sheet" hidden>
+        <div class="sheet-backdrop" data-close></div>
+        <div class="sheet">
+            <div class="sheet-header">
+                <strong class="sheet-title">Корзина</strong>
+                <button class="sheet-close" data-close>Закрыть</button>
+            </div>
+            <div class="cart-empty" id="cart-empty">
+                <div style="font-size: 20px; margin-top: 8px;">Ваша корзина пуста</div>
+                <div style="font-size: 14px; margin-top: 8px; opacity: 0.7;">Добавьте блюда из меню</div>
+            </div>
+            <div class="cart-list" id="cart-list"></div>
+            <div class="cart-summary" id="cart-summary" hidden>
+                <div class="sum-row"><span>Товары</span><b id="sum-items">0₽</b></div>
+                <div class="sum-row"><span>Доставка</span><b id="sum-delivery">0₽</b></div>
+                <div class="sum-row promo" id="sum-promo-row" hidden><span>Промокод</span><b id="sum-promo">-0₽</b></div>
+                <div class="sum-total"><span>Итого</span><b id="sum-total">0₽</b></div>
+                <button class="btn btn-primary" id="checkout-btn">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout sheet -->
+    <div class="category-sheet" id="checkout-sheet" hidden>
+        <div class="sheet-backdrop" data-close></div>
+        <div class="sheet">
+            <div class="sheet-header">
+                <strong class="sheet-title">Оформление заказа</strong>
+                <button class="sheet-close" data-close>Закрыть</button>
+            </div>
+            <div class="checkout">
+                <div class="profile-row">
+                    <label class="label">Город/село, улица</label>
+                    <input class="input" id="co-city" type="text" placeholder="Например: Геническ, ул. Ленина">
+                </div>
+                <div class="profile-row">
+                    <label class="label">Телефон</label>
+                    <input class="input" id="co-phone" type="tel" inputmode="tel" placeholder="+7...">
+                </div>
+                <div class="profile-row">
+                    <label class="label">Промокод (необязательно)</label>
+                    <div class="promo-input">
+                        <input class="input" id="co-promo" type="text" placeholder="BONUS100">
+                        <button class="btn" id="co-apply">Применить</button>
+                    </div>
+                </div>
+                <div class="sum-preview">
+                    <div class="sum-row"><span>Товары</span><b id="co-items">0₽</b></div>
+                    <div class="sum-row"><span>Доставка</span><b id="co-delivery">0₽</b></div>
+                    <div class="sum-row promo" id="co-promo-row" hidden><span>Промокод</span><b id="co-promo-val">-0₽</b></div>
+                    <div class="sum-total"><span>К оплате</span><b id="co-total">0₽</b></div>
+                </div>
+                <button class="btn btn-primary" id="co-submit">Подтвердить заказ</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
